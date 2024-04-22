@@ -1,0 +1,34 @@
+package com.villancio.villanciomarket.persistence.entity;
+
+import java.time.LocalDateTime;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
+@Entity
+@Table(name = "compras")
+public class PuchaseEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_compra")
+    private Integer idPuchase;
+
+    @Column(name = "id_cliente")
+    private String idClient;
+
+    @Column(name = "fecha")
+    private LocalDateTime date;
+
+    @Column(name = "medio_pago")
+    private String paymentMethod;
+
+    @Column(name = "comentario")
+    private String coment;
+
+    @Column(name = "estado")
+    private Boolean state;
+}
