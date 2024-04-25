@@ -31,4 +31,8 @@ public class PuchaseEntity {
 
     @Column(name = "estado")
     private Boolean state;
+
+    @ManyToOne
+    @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
+    private ClientEntity client;
 }

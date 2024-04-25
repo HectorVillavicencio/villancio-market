@@ -1,5 +1,7 @@
 package com.villancio.villanciomarket.persistence.entity;
 
+import java.util.List;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -27,5 +29,8 @@ public class ClientEntity {
 
     @Column(name = "correo_electronico")
     private String mail;
+
+    @OneToMany( mappedBy = "client")
+    private List<PuchaseEntity> puchases;
 
 }
