@@ -1,5 +1,7 @@
 package com.villancio.villanciomarket.persistence.entity;
 
+import java.util.List;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -19,6 +21,7 @@ public class CategoryEntity {
     @Column (name = "estado")
     private String state;
 
-
+    @OneToMany(mappedBy = "category")
+    private List<ProductEntity> products;
 
 }
