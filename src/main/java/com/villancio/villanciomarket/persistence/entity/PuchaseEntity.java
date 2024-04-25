@@ -1,6 +1,7 @@
 package com.villancio.villanciomarket.persistence.entity;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -35,4 +36,7 @@ public class PuchaseEntity {
     @ManyToOne
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private ClientEntity client;
+
+    @OneToMany(mappedBy = "product")
+    private List<ProductPuchaseEntity> productPuchases;
 }
