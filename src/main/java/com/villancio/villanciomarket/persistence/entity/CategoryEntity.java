@@ -19,7 +19,7 @@ public class CategoryEntity {
     private String description;
 
     @Column (name = "estado")
-    private String state;
+    private boolean state;
 
     @OneToMany(mappedBy = "category")
     private List<ProductEntity> products;
