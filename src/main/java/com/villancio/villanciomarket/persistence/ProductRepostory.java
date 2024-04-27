@@ -5,6 +5,7 @@ package com.villancio.villanciomarket.persistence;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.villancio.villanciomarket.domain.model.Product;
@@ -15,7 +16,10 @@ import com.villancio.villanciomarket.persistence.mapper.ProductMapper;
 
 @Repository
 public class ProductRepostory implements ProductRepository{
+    @Autowired
     private ProductCrudRepository productCrudRepository;
+
+    @Autowired
     private ProductMapper mapper;
 
     public List<Product> getAll(){
