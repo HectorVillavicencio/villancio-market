@@ -15,11 +15,12 @@ import com.villancio.villanciomarket.persistence.entity.ProductEntity;
 import com.villancio.villanciomarket.persistence.mapper.ProductMapper;
 
 @Repository
+//Este es para RepostoryEntity
 public class ProductRepostory implements ProductRepository{
     @Autowired
     private ProductCrudRepository productCrudRepository;
 
-    @Autowired
+    @Autowired 
     private ProductMapper mapper;
 
     public List<Product> getAll(){
