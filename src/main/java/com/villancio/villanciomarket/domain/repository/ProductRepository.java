@@ -9,7 +9,7 @@ public interface ProductRepository {
     List<Product> getAll();
     Optional<List<Product>> getByCategory(Integer categoryId); 
     Optional<List<Product>> getScarseProducts(Integer quantity);
-    Optional<List<Product>> getProduct(Integer productId);
+    Optional<Product> getProduct(Integer productId);
     Product save(Product product);
     void delete(Integer product);
 

@@ -37,6 +37,6 @@ public class PuchaseEntity {
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private ClientEntity client;
 
-    @OneToMany(mappedBy = "product")
-    private List<ProductPuchaseEntity> productPuchases;
+    @OneToMany(mappedBy = "puchase")
+    private List<ProductPuchaseEntity> products;
 }

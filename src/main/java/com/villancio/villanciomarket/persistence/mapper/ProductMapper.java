@@ -22,7 +22,7 @@ public interface ProductMapper {
         @Mapping(source = "state", target = "state"),
         @Mapping(source = "category", target = "category")
     })
-    Product toProduct(ProductEntity productEntity);
+    Product toProduct(ProductEntity producto);
     List<Product> toProducts(List<ProductEntity> products);
 
     @InheritInverseConfiguration
