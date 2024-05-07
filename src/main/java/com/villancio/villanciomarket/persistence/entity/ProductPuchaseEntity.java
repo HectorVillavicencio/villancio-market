@@ -20,6 +20,7 @@ public class ProductPuchaseEntity {
     private Boolean state;
 
     @ManyToOne
+    @MapsId("idPuchase")
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
     private PuchaseEntity puchase;
 

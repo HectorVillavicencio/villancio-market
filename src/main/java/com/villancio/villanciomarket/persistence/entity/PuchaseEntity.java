@@ -28,7 +28,7 @@ public class PuchaseEntity {
     private String paymentMethod;
 
     @Column(name = "comentario")
-    private String coment;
+    private String comment;
 
     @Column(name = "estado")
     private Boolean state;
@@ -37,6 +37,6 @@ public class PuchaseEntity {
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private ClientEntity client;
 
-    @OneToMany(mappedBy = "puchase")
+    @OneToMany(mappedBy = "puchase", cascade = {CascadeType.ALL})
     private List<ProductPuchaseEntity> products;
 }
