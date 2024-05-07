@@ -7,7 +7,7 @@ import com.villancio.villanciomarket.domain.model.Purchase;
 
 public interface PurchaseRepository {
     List<Purchase> getAll();
-    Optional<List<Purchase>> getByCliente(String clientId);
+    Optional<List<Purchase>> getByClient(String clientId);
     Purchase save(Purchase purchase);
 
 
